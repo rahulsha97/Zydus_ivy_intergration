@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tabular_UATModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CFTdata_ivy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DivisionName" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="VPsalesCode" Type="varchar" MaxLength="50" />
+    <Property Name="VPsalesName" Type="nvarchar" MaxLength="200" />
+    <Property Name="SalesHeadcode" Type="varchar" MaxLength="50" />
+    <Property Name="SalesHeadName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ZonalHeadCode" Type="varchar" MaxLength="50" />
+    <Property Name="ZonalHeadName" Type="nvarchar" MaxLength="200" />
+    <Property Name="AreaHeadCode" Type="varchar" MaxLength="50" />
+    <Property Name="AreaHeadName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="DistributorCode" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="DistributorName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DSRCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DSRName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RouteCode" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="RouteName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CustomerCode" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Timein" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Timeout" Type="time" Precision="7" Nullable="false" />
+    <Property Name="TimeSpent" Type="time" Precision="7" Nullable="false" />
+    <Property Name="TimeSpent_Sec" Type="bigint" Nullable="false" />
+    <Property Name="PlannedorDeviated" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Orderid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OrderValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TLSD" Type="int" Nullable="false" />
+    <Property Name="SyncDate" Type="datetime" />
+    <Property Name="SyncTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="255" />
+    <Property Name="Latitude" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Longitude" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GeoFencingDevReason" Type="nvarchar" MaxLength="255" />
+    <Property Name="ReceivedON" Type="datetime" Nullable="false" />
+    <Property Name="seller_type" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Userlogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="tabular_UATModelStoreContainer">
+    <EntitySet Name="CFTdata_ivy" EntityType="Self.CFTdata_ivy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Userlogin" EntityType="Self.Userlogin" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

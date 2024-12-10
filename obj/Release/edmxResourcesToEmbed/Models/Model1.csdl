@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tabular_UATModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CFTdata_ivy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DivisionName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VPsalesCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VPsalesName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SalesHeadcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SalesHeadName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ZonalHeadCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZonalHeadName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AreaHeadCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AreaHeadName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="DistributorCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DistributorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DSRCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DSRName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RouteCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RouteName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CustomerCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Timein" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Timeout" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="TimeSpent" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="TimeSpent_Sec" Type="Int64" Nullable="false" />
+    <Property Name="PlannedorDeviated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Orderid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OrderValue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TLSD" Type="Int32" Nullable="false" />
+    <Property Name="SyncDate" Type="DateTime" Precision="3" />
+    <Property Name="SyncTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Reason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GeoFencingDevReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ReceivedON" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="seller_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="tabular_UATEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CFTdata_ivy" EntityType="Self.CFTdata_ivy" />
+    <EntitySet Name="Userlogins" EntityType="tabular_UATModel.Userlogin" />
+  </EntityContainer>
+  <EntityType Name="Userlogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

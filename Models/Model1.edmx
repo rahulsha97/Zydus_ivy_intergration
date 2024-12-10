@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="tabular_UATModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CFTdata_ivy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DivisionName" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="VPsalesCode" Type="varchar" MaxLength="50" />
+          <Property Name="VPsalesName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SalesHeadcode" Type="varchar" MaxLength="50" />
+          <Property Name="SalesHeadName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ZonalHeadCode" Type="varchar" MaxLength="50" />
+          <Property Name="ZonalHeadName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AreaHeadCode" Type="varchar" MaxLength="50" />
+          <Property Name="AreaHeadName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="DistributorCode" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="DistributorName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DSRCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DSRName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RouteCode" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="RouteName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CustomerCode" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Timein" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Timeout" Type="time" Precision="7" Nullable="false" />
+          <Property Name="TimeSpent" Type="time" Precision="7" Nullable="false" />
+          <Property Name="TimeSpent_Sec" Type="bigint" Nullable="false" />
+          <Property Name="PlannedorDeviated" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Orderid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OrderValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TLSD" Type="int" Nullable="false" />
+          <Property Name="SyncDate" Type="datetime" />
+          <Property Name="SyncTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="255" />
+          <Property Name="Latitude" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Longitude" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GeoFencingDevReason" Type="nvarchar" MaxLength="255" />
+          <Property Name="ReceivedON" Type="datetime" Nullable="false" />
+          <Property Name="seller_type" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Userlogin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="tabular_UATModelStoreContainer">
+          <EntitySet Name="CFTdata_ivy" EntityType="Self.CFTdata_ivy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Userlogin" EntityType="Self.Userlogin" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="tabular_UATModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CFTdata_ivy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DivisionName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VPsalesCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VPsalesName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SalesHeadcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SalesHeadName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ZonalHeadCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZonalHeadName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AreaHeadCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AreaHeadName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="DistributorCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DistributorName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DSRCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DSRName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RouteCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RouteName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Timein" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Timeout" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="TimeSpent" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="TimeSpent_Sec" Type="Int64" Nullable="false" />
+          <Property Name="PlannedorDeviated" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Orderid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OrderValue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TLSD" Type="Int32" Nullable="false" />
+          <Property Name="SyncDate" Type="DateTime" Precision="3" />
+          <Property Name="SyncTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Reason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GeoFencingDevReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ReceivedON" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="seller_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="tabular_UATEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CFTdata_ivy" EntityType="Self.CFTdata_ivy" />
+          <EntitySet Name="Userlogins" EntityType="tabular_UATModel.Userlogin" />
+        </EntityContainer>
+        <EntityType Name="Userlogin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="tabular_UATModelStoreContainer" CdmEntityContainer="tabular_UATEntities">
+          <EntitySetMapping Name="CFTdata_ivy">
+            <EntityTypeMapping TypeName="tabular_UATModel.CFTdata_ivy">
+              <MappingFragment StoreEntitySet="CFTdata_ivy">
+                <ScalarProperty Name="seller_type" ColumnName="seller_type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+                <ScalarProperty Name="VPsalesCode" ColumnName="VPsalesCode" />
+                <ScalarProperty Name="VPsalesName" ColumnName="VPsalesName" />
+                <ScalarProperty Name="SalesHeadcode" ColumnName="SalesHeadcode" />
+                <ScalarProperty Name="SalesHeadName" ColumnName="SalesHeadName" />
+                <ScalarProperty Name="ZonalHeadCode" ColumnName="ZonalHeadCode" />
+                <ScalarProperty Name="ZonalHeadName" ColumnName="ZonalHeadName" />
+                <ScalarProperty Name="AreaHeadCode" ColumnName="AreaHeadCode" />
+                <ScalarProperty Name="AreaHeadName" ColumnName="AreaHeadName" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="DistributorCode" ColumnName="DistributorCode" />
+                <ScalarProperty Name="DistributorName" ColumnName="DistributorName" />
+                <ScalarProperty Name="DSRCode" ColumnName="DSRCode" />
+                <ScalarProperty Name="DSRName" ColumnName="DSRName" />
+                <ScalarProperty Name="RouteCode" ColumnName="RouteCode" />
+                <ScalarProperty Name="RouteName" ColumnName="RouteName" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Timein" ColumnName="Timein" />
+                <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+                <ScalarProperty Name="TimeSpent" ColumnName="TimeSpent" />
+                <ScalarProperty Name="TimeSpent_Sec" ColumnName="TimeSpent_Sec" />
+                <ScalarProperty Name="PlannedorDeviated" ColumnName="PlannedorDeviated" />
+                <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+                <ScalarProperty Name="OrderValue" ColumnName="OrderValue" />
+                <ScalarProperty Name="TLSD" ColumnName="TLSD" />
+                <ScalarProperty Name="SyncDate" ColumnName="SyncDate" />
+                <ScalarProperty Name="SyncTime" ColumnName="SyncTime" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="GeoFencingDevReason" ColumnName="GeoFencingDevReason" />
+                <ScalarProperty Name="ReceivedON" ColumnName="ReceivedON" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Userlogins">
+            <EntityTypeMapping TypeName="tabular_UATModel.Userlogin">
+              <MappingFragment StoreEntitySet="Userlogin">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

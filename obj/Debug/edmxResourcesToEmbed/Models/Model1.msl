@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tabular_UATModelStoreContainer" CdmEntityContainer="tabular_UATEntities">
+    <EntitySetMapping Name="CFTdata_ivy">
+      <EntityTypeMapping TypeName="tabular_UATModel.CFTdata_ivy">
+        <MappingFragment StoreEntitySet="CFTdata_ivy">
+          <ScalarProperty Name="seller_type" ColumnName="seller_type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DivisionName" ColumnName="DivisionName" />
+          <ScalarProperty Name="VPsalesCode" ColumnName="VPsalesCode" />
+          <ScalarProperty Name="VPsalesName" ColumnName="VPsalesName" />
+          <ScalarProperty Name="SalesHeadcode" ColumnName="SalesHeadcode" />
+          <ScalarProperty Name="SalesHeadName" ColumnName="SalesHeadName" />
+          <ScalarProperty Name="ZonalHeadCode" ColumnName="ZonalHeadCode" />
+          <ScalarProperty Name="ZonalHeadName" ColumnName="ZonalHeadName" />
+          <ScalarProperty Name="AreaHeadCode" ColumnName="AreaHeadCode" />
+          <ScalarProperty Name="AreaHeadName" ColumnName="AreaHeadName" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DistributorCode" ColumnName="DistributorCode" />
+          <ScalarProperty Name="DistributorName" ColumnName="DistributorName" />
+          <ScalarProperty Name="DSRCode" ColumnName="DSRCode" />
+          <ScalarProperty Name="DSRName" ColumnName="DSRName" />
+          <ScalarProperty Name="RouteCode" ColumnName="RouteCode" />
+          <ScalarProperty Name="RouteName" ColumnName="RouteName" />
+          <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Timein" ColumnName="Timein" />
+          <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+          <ScalarProperty Name="TimeSpent" ColumnName="TimeSpent" />
+          <ScalarProperty Name="TimeSpent_Sec" ColumnName="TimeSpent_Sec" />
+          <ScalarProperty Name="PlannedorDeviated" ColumnName="PlannedorDeviated" />
+          <ScalarProperty Name="Orderid" ColumnName="Orderid" />
+          <ScalarProperty Name="OrderValue" ColumnName="OrderValue" />
+          <ScalarProperty Name="TLSD" ColumnName="TLSD" />
+          <ScalarProperty Name="SyncDate" ColumnName="SyncDate" />
+          <ScalarProperty Name="SyncTime" ColumnName="SyncTime" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="GeoFencingDevReason" ColumnName="GeoFencingDevReason" />
+          <ScalarProperty Name="ReceivedON" ColumnName="ReceivedON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Userlogins">
+      <EntityTypeMapping TypeName="tabular_UATModel.Userlogin">
+        <MappingFragment StoreEntitySet="Userlogin">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
